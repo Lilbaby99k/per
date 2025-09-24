@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+.social-icons span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #181818;
+}
+
+.intro-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00ffff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-img, .about-img {
+  width: 300px;
+  height: 300px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #1a1a1a;
+}
+
+.skill-box {
+  width: 30%;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+    transition: transform 0.3s ease;
+
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+}
+
+
+.about {
+  display: flex;
+  padding: 50px;
+  gap: 40px;
+  background-color: #181818;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: #1f1f1f;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+}
