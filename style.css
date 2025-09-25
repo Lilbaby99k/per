@@ -7,6 +7,7 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -23,6 +24,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -36,9 +39,12 @@ nav ul li {
 
 .intro {
   display: flex;
-  justify-content: space-between;
-  padding: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
   background-color: #181818;
+  text-align: center;
 }
 
 .intro-text h1 {
@@ -65,34 +71,33 @@ button {
   height: 300px;
   background-color: #333;
   border-radius: 50%;
+  margin: 20px;
 }
 
 .skills {
   display: flex;
-  justify-content: space-around;
-  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
   background-color: #1a1a1a;
 }
 
 .skill-box {
-  width: 30%;
+  flex: 1 1 250px;
   background-color: #222;
   padding: 20px;
   border-radius: 10px;
-    transition: transform 0.3s ease;
-
+  max-width: 300px;
 }
-
-.skill-box:hover {
-  transform: scale(1.05);
-}
-
 
 .about {
   display: flex;
-  padding: 50px;
-  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
   background-color: #181818;
+  text-align: center;
 }
 
 .about-text h2 {
@@ -102,8 +107,44 @@ button {
 
 .stats {
   display: flex;
-  justify-content: space-around;
-  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
   background-color: #1f1f1f;
   font-size: 18px;
+  text-align: center;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-text h1 {
+    font-size: 36px;
+  }
+
+  .intro-text p {
+    font-size: 18px;
+  }
+
+  .profile-img, .about-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .skill-box {
+    max-width: 90%;
+  }
+
+  .stats div {
+    width: 100%;
+  }
 }
